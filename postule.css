@@ -5,15 +5,22 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
+/* HEADER */
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 /* LOGO */
 
 
-.logo {
+/* .logo {
     position: absolute;
     top: -10px;
     left: -10px;
-}
+} */
 
 .logo img {
     width: 100px;
@@ -51,9 +58,9 @@ body {
 /* MENU */
 
 .allmenu {
-    position: absolute;
+    /* position: absolute;
     top: 10px;
-    right: 10px;
+    right: 10px; */
     width: 190px;
 }
 
@@ -259,6 +266,17 @@ body {
 
 /* RESPONSIVE */
 
+@media only screen and (min-width: 820px) and (max-width: 1024px) {
+    #lien-song {
+        top: 1px;
+        left: 70px;
+    }
+
+    .destine-image {
+        margin-top: -100px;
+    }
+}
+
 @media only screen and (max-width: 380px) {
 
     .logo img {
@@ -266,9 +284,6 @@ body {
     }
 
     .allmenu {
-        position: absolute;
-        top: 20px;
-        right: 20px;
         width: 110px;
     }
 
@@ -281,7 +296,6 @@ body {
     .card {
         max-width: 90%;
         margin: auto;
-        margin-top: 100px;
         font-size: 15px;
     }
 
@@ -303,12 +317,16 @@ body {
     }
 
     #lien-song {
-        top: 1px;
-        left: 90px;
+        display: none;
     }
 
     .destine-image {
-        width: 90%;
+        margin-top: -200px;
+    }
+
+    .destine-image img {
+        width: 370px;
+        height: auto;
     }
 
     .allfooter {

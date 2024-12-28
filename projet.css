@@ -5,15 +5,15 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
+/* HEADER */
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 /* LOGO */
-
-
-.logo {
-    position: absolute;
-    top: -10px;
-    left: -10px;
-}
 
 .logo img {
     width: 100px;
@@ -51,9 +51,6 @@ body {
 /* MENU */
 
 .allmenu {
-    position: absolute;
-    top: 10px;
-    right: 10px;
     width: 190px;
 }
 
@@ -61,7 +58,6 @@ body {
     width: 50px;
     height: auto;
     transition: transform 0.2s ease-in-out;
-    margin-left: 80px;
 }
 
 .image-menu:hover {
@@ -104,15 +100,14 @@ body {
     color: magenta;
 }
 
+
 /* CAROUSEL */
 
 
 .carousel {
     width: 100%;
     max-width: 600px;
-    /* Largeur maximale du carrousel */
     overflow: hidden;
-    /* Cache les parties des images qui débordent */
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
 }
@@ -180,7 +175,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 70px;
+    margin-top: -120px;
 }
 
 .card1,
@@ -306,26 +301,30 @@ body {
 }
 
 
-
 /* RESPONSIVE */
 
+
+@media only screen and (min-width: 820px) and (max-width: 1024px) {
+    .image-menu {
+        margin-top: 5px;
+        margin-left: 50px;
+    }
+}
 
 @media only screen and (max-width: 380px) {
 
     .allmenu {
         width: 110px;
-        position: absolute;
-        top: 20px;
-        right: 50px;
-    }
-
-    .alldiv1 {
-        margin-top: 100px;
-        max-width: 100%;
     }
 
     .image-menu {
-        margin-left: 80px;
+        margin-top: 5px;
+        margin-left: 50px;
+    }
+
+    .alldiv1 {
+        margin-top: -200px;
+        max-width: 100%;
     }
 
     .card1,
