@@ -19,10 +19,10 @@
 
     <header>
         <div class="logo" id="remonter">
-            <a href="https://destine.id/bienvenue" target="_blank"><img src="image/logo.png" alt="Logo Destine"></a>
+            <a href="https://destine.studio/bienvenue" target="_blank"><img src="image/logo.png" alt="Logo Destine"></a>
         </div>
         <h1>Bienvenue sur Destine</h1>
-        <p id="slogan">Tout pour réussir</p>
+        <!-- <p id="slogan">Tout pour réussir</p> -->
 
         <div class="allmenu">
             <a id="menu-bouton" href="#liste-menu"><img class="image-menu" src="image/menu-burger.png"
@@ -43,7 +43,10 @@
                     <a href="postule.html">
                         <li>Offres d'emploi</li>
                     </a>
-                    <a href="https://destine.id/bienvenue">
+                    <a href="sortie.html">
+                        <li>André Destine</li>
+                    </a>
+                    <a href="https://destine.studio/bienvenue">
                         <li>Ouvrir Destine</li>
                     </a>
                     <a href="https://play.google.com/store/apps/details?id=com.favconseilettechnologie.destine">
@@ -59,13 +62,13 @@
         <label for="accordeon1" class="accordeon-button">Explorez les catalogues</label>
         <div class="accordeon-content">
             <div class="boite-lien">
-                <a class="liennav" href="https://destine.id/cinema" target="_blank">Prochaines sorties Cinéma</a>
-                <a class="liennav" href="https://destine.id/sponsors" target="_blank">Sponsors</a>
-                <a class="liennav" href="https://destine.id/investir" target="_blank">Aides financières
+                <a class="liennav" href="https://destine.studio/cinema" target="_blank">Prochaines sorties Cinéma</a>
+                <a class="liennav" href="https://destine.studio/sponsors" target="_blank">Sponsors</a>
+                <a class="liennav" href="https://destine.studio/investir" target="_blank">Aides financières
                     audiovisuelles</a>
-                <a class="liennav" href="https://destine.id/musique" target="_blank">Musique</a>
-                <a class="liennav" href="https://destine.id/scenario" target="_blank">Scénarios</a>
-                <a class="liennav" href="https://destine.id/talents" target="_blank">Talents et figurants</a>
+                <a class="liennav" href="https://destine.studio/musique" target="_blank">Musique</a>
+                <a class="liennav" href="https://destine.studio/scenario" target="_blank">Scénarios</a>
+                <a class="liennav" href="https://destine.studio/talents" target="_blank">Talents et figurants</a>
             </div>
         </div>
     </div>
@@ -75,13 +78,13 @@
         <label for="accordeon2" class="accordeon-button">Explorez la ID-ligne</label>
         <div class="accordeon-content">
             <div class="boite-lien">
-                <a class="liennav" href="https://destine.id/video" target="_blank">Films-courts</a>
-                <a class="liennav" href="https://destine.id/forum" target="_blank">Forums</a>
-                <a class="liennav" href="https://destine.id/actualite" target="_blank">Actualités</a>
-                <a class="liennav" href="https://destine.id/Podcast" target="_blank">Podcast</a>
-                <a class="liennav" href="https://destine.id/Montage" target="_blank">Outils montage vidéo</a>
-                <a class="liennav" href="https://destine.id/Publicite" target="_blank">Partage Publicité</a>
-                <a class="liennav" href="https://destine.id/messagerie" target="_blank">Messagerie</a>
+                <a class="liennav" href="https://destine.studio/video" target="_blank">Films-courts</a>
+                <a class="liennav" href="https://destine.studio/forum" target="_blank">Forums</a>
+                <a class="liennav" href="https://destine.studio/actualite" target="_blank">Actualités</a>
+                <a class="liennav" href="https://destine.studio/Podcast" target="_blank">Podcast</a>
+                <a class="liennav" href="https://destine.studio/Montage" target="_blank">Outils montage vidéo</a>
+                <a class="liennav" href="https://destine.studio/Publicite" target="_blank">Partage Publicité</a>
+                <a class="liennav" href="https://destine.studio/messagerie" target="_blank">Messagerie</a>
             </div>
         </div>
     </div>
@@ -89,7 +92,7 @@
 
 
     <p id="presentation">
-        <a href="https://destine.id/" target="_blank">
+        <a href="https://destine.studio/" target="_blank">
             Destine
         </a> est une plateforme de réseau social de
         services
@@ -97,11 +100,63 @@
         l'audiovisuel et du divertissement !
     </p>
 
+    <div class="container">
+        <h2>Découvrez les prochaines sorties cinéma sur &nbsp <a href="https://destine.studio/cinema">Destine !</a></h2>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="image/sortie1.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="image/sortie2.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="image/sortie3.jpg" style="width:100%">
+            </div>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <script>
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+        </script>
+    </div>
+
     <div class="alldiv">
         <div class="bigdiv">
             <div class="div1 big1">
                 <img class="image" src="image/prochaine-sortie-destine.jpg">
-                <p>Consultez les actualités du <a href="https://destine.id/cinema" target="_blank">cinéma</a> !
+                <p>Consultez les actualités du <a href="https://destine.studio/cinema" target="_blank">cinéma</a> !
                 </p>
             </div>
         </div>
@@ -109,14 +164,14 @@
             <div class="div2 big2">
                 <img class="image" src="image/pop-culture-destine.jpg">
                 <p>Vous êtes passionnés de pop-culture, de mangas ou tout simplement passionnés de cinéma,<a
-                        href="https://destine.id/" target="_blank">Destine</a> est l'endroit idéal pour vous !
+                        href="https://destine.studio/" target="_blank">Destine</a> est l'endroit idéal pour vous !
                 </p>
             </div>
         </div>
         <div class="bigdiv">
             <div class="div3 big3">
                 <img class="image" src="image/id-ligne-destine.jpg">
-                <p>Explorez la <a href="https://destine.id/video" target="_blank"> ID-ligne</a>, créez des forums et
+                <p>Explorez la <a href="https://destine.studio/video" target="_blank"> ID-ligne</a>, créez des forums et
                     discutez avec votre communauté !
                 </p>
             </div>
@@ -126,12 +181,11 @@
                 <img class="image" src="image/catalogue-destine.jpg">
                 <p class="dernier-paragraphe">
                     Explorez les catalogues. Vous êtes scénariste ? Partagez vos scénarios sur<a
-                        href="https://destine.id/scenario" target="_blank">Destine</a>.<br>
-                    Vous êtes créateurs de contenus ? Trouvez votre sponsors sur<a href="https://destine.id/sponsors"
+                        href="https://destine.studio/scenario" target="_blank">Destine</a>.<br>
+                    Vous êtes créateurs de contenus ? Trouvez votre sponsors sur<a href="https://destine.studio/sponsors"
                         target="_blank">Destine</a>.<br>
-                    Vous cherchez des financements pour votre projet audiovisuel ?<a href="https://destine.id/investir"
-                        target="_blank">Destine</a> vous mets à disposition les aides publiques auquelles vous avez
-                    droit.
+                    Vous cherchez des financements pour votre projet audiovisuel ? Consultez <a href="https://destine.studio/investir"
+                        target="_blank">Destine</a> !
                 </p>
             </div>
         </div>
@@ -147,7 +201,7 @@
         </button>
 
         <div class="footer2">
-            <a class="lienfooter" href="https://destine.id/bienvenue" target="_blank">www.destine.id</a> <br>
+            <a class="lienfooter" href="https://destine.studio/bienvenue" target="_blank">https://destine.studio/</a> <br>
 
             <a class="lienfooter"
                 href="https://play.google.com/store/apps/details?id=com.favconseilettechnologie.destine"

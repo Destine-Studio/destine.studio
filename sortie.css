@@ -5,9 +5,11 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
+body * {
+    display: block;
+}
 
 /* LOGO */
-
 
 .logo {
     position: absolute;
@@ -104,139 +106,108 @@ body {
     color: magenta;
 }
 
-/* CAROUSEL */
+/* CONTAINER */
 
-
-.carousel {
+.alldiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 100px;
     width: 100%;
-    max-width: 600px;
-    /* Largeur maximale du carrousel */
-    overflow: hidden;
-    /* Cache les parties des images qui débordent */
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
 }
 
-.carousel:hover {
+.container {
+    font-size: 20px;
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    color: #3c096c;
+    display: block;
+    transition: transform 0.2s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.container:hover {
     transform: scale(1.05);
 }
 
-.carousel-images {
-    display: flex;
-    transition: transform 1s ease-in-out;
-    /* Ajoute une transition pour un effet de défilement fluide */
-}
-
-.carousel-images img {
+.titre-container,
+.lien-container {
     width: 100%;
-    max-width: 600px;
-    /* Ajuste la largeur des images pour qu'elles s'adaptent au carrousel */
+    /* Prendre toute la largeur */
+    max-width: 300px;
+    /* Limiter la largeur maximale */
+    font-weight: bolder;
+    text-align: justify;
+    padding: 0 0;
 }
 
-.carousel-images {
-    animation: slide 20s infinite;
+#span1 {
+    color: black;
 }
 
-@keyframes slide {
-    0% {
-        transform: translateX(0%);
-        /* Permet de déplacer un élément horizontalement sur sa propre largeur vers la droite */
-    }
-
-    14% {
-        transform: translateX(-100%);
-    }
-
-    28% {
-        transform: translateX(-100%);
-    }
-
-    42% {
-        transform: translateX(0%);
-    }
-
-    56% {
-        transform: translateX(0%);
-        /* Permet de déplacer un élément horizontalement sur sa propre largeur vers la droite */
-    }
-
-    70% {
-        transform: translateX(-100%);
-    }
-
-    84% {
-        transform: translateX(-100%);
-    }
-
-    100% {
-        transform: translateX(0%);
-    }
+#span2,
+.lien-container {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
 }
 
-/* CARDS */
-
-.alldiv1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 70px;
+#span2:hover,
+.lien-container:hover {
+    color: magenta;
+    text-decoration: underline;
 }
 
-.card1,
-.card2 {
+.image-container {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.lien-p {
+    position: relative;
+    bottom: 40px;
+    left: 30px;
+}
+
+.android-image-container {
+    width: 30px;
+    height: auto;
+    position: relative;
+}
+
+.sous-container {
+    margin-left: 10px;
+    /* Ajuster la marge pour le responsive */
+    padding-top: 20px;
+}
+
+/* IMAGE DESTINE */
+
+.destine-image {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.destine-image img {
     width: 100%;
     max-width: 600px;
     height: auto;
-    font-size: 17px;
-    background-color: #fff;
-    color: #3c096c;
+    border-radius: 10px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
-    font-weight: bolder;
-    margin-top: 20px;
-    font-size: 20px;
 }
 
-.card1:hover {
+.destine-image img:hover {
     transform: scale(1.05);
-}
-
-.card1 ul li:hover {
-    color: black;
-}
-
-.card1 ul p {
-    color: magenta;
-    font-weight: bolder;
-}
-
-.card2:hover {
-    transform: scale(1.05);
-}
-
-.card2 ul li:hover {
-    color: black;
-}
-
-.card2 ul p {
-    color: magenta;
-    font-weight: bolder;
-}
-
-.card2 a {
-    text-decoration: none;
-    color: magenta;
-    font-weight: bolder;
-}
-
-.card2 a:hover {
-    color: black;
-    font-weight: bolder;
 }
 
 /* FOOTER */
-
 
 .allfooter {
     background-color: #333;
@@ -305,58 +276,40 @@ body {
     text-decoration: none;
 }
 
-
-
 /* RESPONSIVE */
 
-
 @media only screen and (max-width: 380px) {
-
-    .allmenu {
-        width: 110px;
-        position: absolute;
-        top: 20px;
-        right: 50px;
+    
+    .logo img {
+        width: 90px;
     }
 
-    .alldiv1 {
-        margin-top: 100px;
-        max-width: 100%;
+    .allmenu {
+        position: absolute;
+        top: 20px;
+        right: 0;
+        margin: 0 auto;
+        width: 100px;
     }
 
     .image-menu {
-        margin-left: 80px;
+        width: 50px;
+        margin: 0 auto;
+        margin-left: 50px;
     }
 
-    .card1,
-    .card2 {
-        width: 90%;
-        margin: 20px 0;
-    }
-
-    .carousel {
-        width: 90%;
-    }
-
-    .allfooter {
-        width: 96%;
-        padding: 10px;
-        bottom: 0px;
-    }
-
-    .footer1 {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .footer2 {
+    .alldiv {
         flex-direction: column;
         align-items: center;
     }
 
-    #bouton-remonter {
-        position: relative;
-        left: 0px;
+    .container {
+        margin-left: 30px;
+        width: 100%;
+    }
+
+    .destine-image {
+        margin-left: 30px;
+        width: 100%;
     }
 }
