@@ -277,11 +277,28 @@ header {
     }
 }
 
-@media (min-width: 1025px) and (max-width: 1366px) {
+@media (min-width: 1025px) and (max-width: 2000px) {
     .destine-image {
         margin-top: -150px;
     }
 }
+
+
+@media only screen and (min-width: 381px) and (max-width: 819px) {
+
+    header {
+        width: 100%;
+    }
+
+    .destine-image img {
+        width: 100%;
+    }
+
+    .destine-image {
+        margin-top: -150px;
+    }
+}
+
 
 @media only screen and (max-width: 380px) {
 
